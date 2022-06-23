@@ -1,12 +1,13 @@
 import React from "react";
-import Form from "../components/Form";
 import Movies from "../components/Movies";
+import SearchForm from "../components/SearchForm";
+
 import Movie from "./Movie";
 
 const Home = () => {
   return (
     <main>
-      <Form></Form>
+      <SearchForm></SearchForm>
       <Movies></Movies>
     </main>
   );
