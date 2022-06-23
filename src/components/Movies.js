@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useGlobalContext } from "../context";
 
 const Movies = () => {
@@ -10,13 +11,12 @@ const Movies = () => {
   return (
     <section>
       {movies.map((movie) => {
-        const { Title, Year, Poster } = movie;
+        const { imdbID: id, Title: title, Year: year, Poster: poster } = movie;
+
         return (
-          <article className="artMovie">
-            <h4>{Title}</h4>
-            <img src={Poster} alt="" />
-            <span>{Year}</span>
-          </article>
+          <Link to={`/movies/${id}`} key={id}>
+            movie
+          </Link>
         );
       })}
     </section>
