@@ -4,6 +4,8 @@ import { useGlobalContext } from "../context";
 
 const Movies = () => {
   const { movies, isLoading } = useGlobalContext();
+  const urlNopic =
+    "https://upload.wikimedia.org/wikipedia/commons/f/fc/No_picture_available.png";
 
   if (isLoading) {
     return <div>Loading...</div>;
@@ -15,7 +17,11 @@ const Movies = () => {
 
         return (
           <Link to={`/movies/${id}`} key={id}>
-            movie
+            <article>
+              <img src={poster === "N/A" ? urlNopic : poster} alt={title} />
+              <h4>{title}</h4>
+              <p>{year}</p>
+            </article>
           </Link>
         );
       })}
