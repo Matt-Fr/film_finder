@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { API_ENDPOINT } from "../context";
 
 const Movie = () => {
+  const urlNopic =
+    "https://upload.wikimedia.org/wikipedia/commons/f/fc/No_picture_available.png";
   const { id } = useParams();
   const [movie, setMovie] = useState({});
   const [isLoading, setLoading] = useState(true);
@@ -36,7 +38,19 @@ const Movie = () => {
     );
   }
 
-  return <div>Movie</div>;
+  const { Poster: poster, Title: title, Plot: plot, Year: year } = movie;
+
+  return (
+    <section>
+      <img src={poster === "N/A" ? urlNopic : poster} alt={title} />
+      <div>
+        <h2>{title}</h2>
+        <p>{plot}</p>
+        <h4>{year}</h4>
+      </div>
+      <Link to="/">Back to movies</Link>
+    </section>
+  );
 };
 
 export default Movie;

@@ -11,16 +11,22 @@ const Movies = () => {
     return <div>Loading...</div>;
   }
   return (
-    <section>
+    <section className="sectionMovies">
       {movies.map((movie) => {
         const { imdbID: id, Title: title, Year: year, Poster: poster } = movie;
 
         return (
-          <Link to={`/movies/${id}`} key={id}>
-            <article>
-              <img src={poster === "N/A" ? urlNopic : poster} alt={title} />
-              <h4>{title}</h4>
-              <p>{year}</p>
+          <Link to={`/movies/${id}`} key={id} className="linkMoviecard">
+            <article className="movieCard">
+              <img
+                src={poster === "N/A" ? urlNopic : poster}
+                alt={title}
+                className="movieCard-img"
+              />
+              <div className="movieCard-info">
+                <h4 className="movieCard-info-title">{title}</h4>
+                <p className="movieCard-info-year">{year}</p>
+              </div>
             </article>
           </Link>
         );
