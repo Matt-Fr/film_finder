@@ -5,12 +5,14 @@ const SearchForm = () => {
   const { query, setQuery, error } = useGlobalContext();
   return (
     <form
+      className="form"
       onSubmit={(e) => {
         e.preventDefault();
       }}
     >
       <h2>search movies</h2>
       <input
+        className="form-input"
         type="text"
         value={query}
         onChange={(e) => {
