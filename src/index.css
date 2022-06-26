@@ -112,6 +112,27 @@ body {
 }
 .container-info-year {
 }
+.container-info-metascore {
+}
+.container-info-metascore {
+  padding: 0.5rem;
+  color: white;
+  margin-left: 0.5rem;
+
+  border-radius: 0.5rem;
+}
+.container-info-metascore-bad {
+  background-color: red;
+}
+.container-info-metascore-medium {
+  background-color: orange;
+}
+.container-info-metascore-good {
+  background-color: green;
+}
+.container-info-metascore-na {
+  background-color: grey;
+}
 
 .container-poster {
   width: 30%;

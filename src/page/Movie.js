@@ -45,7 +45,21 @@ const Movie = () => {
     Plot: plot,
     Year: year,
     Director: director,
+    Metascore,
   } = movie;
+
+  const metascore = parseInt(Metascore);
+  console.log(metascore);
+  const colorMetascore = (metascore) => {
+    if (!metascore) {
+      return "container-info-metascore container-info-metascore-na";
+    }
+    if (metascore < 50) {
+      return "container-info-metascore container-info-metascore-bad";
+    } else if (metascore < 70) {
+      return "container-info-metascore container-info-metascore-medium";
+    } else return "container-info-metascore container-info-metascore-good";
+  };
 
   return (
     <section className="sectionSinglemovie">
@@ -61,6 +75,10 @@ const Movie = () => {
           <h2 className="container-info-title">{title}</h2>
           <h4 className="container-info-year">{year}</h4>
           <p className="container-info-director">{`Director: ${director}`}</p>
+          <p className="container-info-meta">
+            Metascore
+            <span className={colorMetascore(metascore)}>{metascore}</span>
+          </p>
           <p className="container-info-plot">{plot}</p>
         </div>
       </div>
