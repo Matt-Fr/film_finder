@@ -19,7 +19,7 @@ const SearchForm = () => {
           setQuery(e.target.value);
         }}
       />
-      {error.show && <div>{error.msg}</div>}
+      {error.show && <span className="errorMsg">{error.msg}</span>}
     </form>
   );
 };

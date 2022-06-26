@@ -24,8 +24,8 @@ const Movies = () => {
                 className="movieCard-img"
               />
               <div className="movieCard-info">
-                <h4 className="movieCard-info-title">{title}</h4>
-                <p className="movieCard-info-year">{year}</p>
+                <h4 className="movieCard-title">{title}</h4>
+                <p className="movieCard-year">{year}</p>
               </div>
             </article>
           </Link>

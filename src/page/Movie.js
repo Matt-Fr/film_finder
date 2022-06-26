@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { API_ENDPOINT } from "../context";
+import { FaArrowLeft } from "react-icons/fa";
 
 const Movie = () => {
   const urlNopic =
@@ -38,17 +39,36 @@ const Movie = () => {
     );
   }
 
-  const { Poster: poster, Title: title, Plot: plot, Year: year } = movie;
+  const {
+    Poster: poster,
+    Title: title,
+    Plot: plot,
+    Year: year,
+    Director: director,
+  } = movie;
 
   return (
-    <section>
-      <img src={poster === "N/A" ? urlNopic : poster} alt={title} />
-      <div>
-        <h2>{title}</h2>
-        <p>{plot}</p>
-        <h4>{year}</h4>
+    <section className="sectionSinglemovie">
+      <div className="container">
+        <div className="container-poster">
+          <img
+            className="poster"
+            src={poster === "N/A" ? urlNopic : poster}
+            alt={title}
+          />
+        </div>
+        <div className="container-info">
+          <h2 className="container-info-title">{title}</h2>
+          <h4 className="container-info-year">{year}</h4>
+          <p className="container-info-director">{`Director: ${director}`}</p>
+          <p className="container-info-plot">{plot}</p>
+        </div>
       </div>
-      <Link to="/">Back to movies</Link>
+
+      <Link className="btnBack" to="/">
+        <FaArrowLeft />
+        <span>Back to movies</span>
+      </Link>
     </section>
   );
 };
