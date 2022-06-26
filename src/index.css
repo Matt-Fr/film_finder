@@ -1,3 +1,4 @@
+html,
 body {
   font-family: "Courier New", Courier, monospace;
 
@@ -94,6 +95,8 @@ body {
 }
 .container {
   display: flex;
+  overflow: hidden;
+  width: 100%;
 }
 .container-info {
   display: flex;
@@ -167,4 +170,56 @@ body {
 
 .btnBack:hover {
   transform: scale(1.05);
+}
+
+@media only screen and (max-width: 708px) {
+  html,
+  body {
+    margin: 0.5rem;
+  }
+  .sectionMovies {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 0;
+  }
+  .container {
+    flex-direction: column;
+  }
+
+  .container-poster {
+    width: 100%;
+  }
+
+  .container-info {
+    display: flex;
+    margin: 0;
+    width: 100%;
+    border-radius: 0.3rem;
+    padding: 0;
+  }
+  .container-info-title {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+  }
+  .container-info-director {
+    font-size: 1.2rem;
+  }
+  .container-info-plot {
+    font-size: 1rem;
+  }
+  .container-info-year {
+    font-size: 1rem;
+    margin: 0;
+  }
+  .container-info-meta {
+    font-size: 1.5rem;
+  }
+  .container-info-metascore {
+    padding: 0.5rem;
+    color: white;
+    margin-left: 0.5rem;
+
+    border-radius: 0.5rem;
+  }
 }
