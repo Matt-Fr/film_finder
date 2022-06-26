@@ -98,8 +98,12 @@ body {
 .container-info {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   margin: 0 1rem;
   width: 70%;
+  background-color: rgb(243, 243, 243);
+  border-radius: 1rem;
+  padding: 0 1rem;
 }
 .container-info-title {
   font-size: 2rem;
@@ -109,10 +113,13 @@ body {
   font-size: 1.2rem;
 }
 .container-info-plot {
+  font-size: 1rem;
 }
 .container-info-year {
+  font-size: 1.5rem;
 }
-.container-info-metascore {
+.container-info-meta {
+  font-size: 1.5rem;
 }
 .container-info-metascore {
   padding: 0.5rem;
@@ -144,13 +151,6 @@ body {
   object-fit: cover;
 }
 
-.btn-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-}
-
 .btnBack {
   background-color: black;
   border-radius: 2rem;
@@ -162,4 +162,9 @@ body {
   justify-content: space-around;
   align-items: center;
   width: 11rem;
+  transition-duration: 0.3s;
+}
+
+.btnBack:hover {
+  transform: scale(1.05);
 }

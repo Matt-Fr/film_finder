@@ -75,11 +75,13 @@ const Movie = () => {
           <h2 className="container-info-title">{title}</h2>
           <h4 className="container-info-year">{year}</h4>
           <p className="container-info-director">{`Director: ${director}`}</p>
+          <p className="container-info-plot">{plot}</p>
           <p className="container-info-meta">
             Metascore
-            <span className={colorMetascore(metascore)}>{metascore}</span>
+            <span className={colorMetascore(metascore)}>
+              {!metascore ? "unknown" : metascore}
+            </span>
           </p>
-          <p className="container-info-plot">{plot}</p>
         </div>
       </div>
 
