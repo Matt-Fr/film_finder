@@ -28,7 +28,7 @@ const Movie = () => {
   }, [id]);
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <span className="loading">Loading...</span>;
   }
   if (error.show) {
     return (

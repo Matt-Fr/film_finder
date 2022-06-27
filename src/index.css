@@ -1,7 +1,6 @@
 html {
   font-family: "Courier New", Courier, monospace;
   padding: 0;
-
   max-width: 100%;
   overflow-x: hidden;
   padding: 0;
@@ -172,6 +171,15 @@ body {
 
 .btnBack:hover {
   transform: scale(1.05);
+}
+
+.loading {
+  font-size: 3rem;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 @media only screen and (max-width: 708px) {

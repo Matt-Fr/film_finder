@@ -8,7 +8,7 @@ const Movies = () => {
     "https://upload.wikimedia.org/wikipedia/commons/f/fc/No_picture_available.png";
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <span className="loading">Loading...</span>;
   }
   return (
     <section className="sectionMovies">
