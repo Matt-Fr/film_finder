@@ -12,6 +12,7 @@ const SearchForm = () => {
     >
       <h2>search movies</h2>
       <input
+        autoFocus
         className="form-input"
         type="text"
         value={query}
