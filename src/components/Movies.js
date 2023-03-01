@@ -10,9 +10,13 @@ const Movies = () => {
   if (isLoading) {
     return <span className="loading">Loading...</span>;
   }
+
+  // Sort the movies by year in descending order
+  const sortedMovies = movies.sort((a, b) => b.Year - a.Year);
+
   return (
     <section className="sectionMovies">
-      {movies.map((movie) => {
+      {sortedMovies.map((movie) => {
         const { imdbID: id, Title: title, Year: year, Poster: poster } = movie;
 
         return (
